@@ -1,4 +1,4 @@
+import { loadSync } from "https://deno.land/std@0.177.0/dotenv/mod.ts";
+import { eHallPassClient } from "../lib/index.ts"
 
-import { eHallPassClient } from "../lib"
-
-const cli = new eHallPassClient()
+const cli = new eHallPassClient(loadSync()["userAuth"])
